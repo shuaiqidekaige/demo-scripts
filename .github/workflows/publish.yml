@@ -17,8 +17,7 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-      - run: ls
-      - run: cd test
-      - run: ls
+      - run: npm publish
+        working-directory: ./test
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
